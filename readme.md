@@ -1,7 +1,5 @@
 # Developmental Synapse Remodeling
 
-
-[**![License](https://img.shields.io/github/license/ChristophKirst/developmental_synapse_remodeling?color=green&style=plastic)](https://github.com/ChristophKirst/developmental_synapse_remodeling/license.txt)**
 ![Size](https://img.shields.io/github/repo-size/ChristophKirst/developmental_synapse_remodeling?style=plastic)
 [![Language](https://img.shields.io/github/languages/top/ChristophKirst/developmental_synapse_remodeling?style=plastic)](https://github.com/ChristophKirst/developmental_synapse_dynamics)
 
