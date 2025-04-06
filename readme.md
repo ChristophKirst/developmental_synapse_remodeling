@@ -21,18 +21,18 @@ We recommend installation via conda using the [`environment.yml`](environment.ym
 
 The `scripts` folder contains exmaple and analysis scripts:
 
-* [`example.py`](./scripts/example.py) runs the code with simple example simulations of the model. 
+* [`example.py`](/scripts/example.py) runs the code with simple example simulations of the model. 
 
-* [`analysis.py`](./scripts/analysis.py) performs the full analysis and reproduces the figures from [Nakajo et al.](#references).
+* [`analysis.py`](/scripts/analysis.py) performs the full analysis and reproduces the figures from [Nakajo et al.](#references).
 
 A sample simulation as generated in the example script looks like this:
 
-![model](./figures/model_example.png)
+![model](/figures/model_example.png)
 
 indicating the individual synapses getting born into the new dynamic state (blue) and either decaying or switching into
 a stable state (orange) before decaying at a slower rate.
 
-![model](./figures/model_example_distributions.png)
+![model](/figures/model_example_distributions.png)
 
 ## References
 
