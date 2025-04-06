@@ -4,8 +4,9 @@
 [![Language](https://img.shields.io/github/languages/top/ChristophKirst/developmental_synapse_remodeling?style=plastic)](https://github.com/ChristophKirst/developmental_synapse_dynamics)
 
 
-The developmental synapse remodeling software is a python toolbox for the analysis of synapse turnover dynamics 
-in experimental data and model fitting as described in [Nakajo et al.](#references)
+The [developmental synapse remodeling software](https://github.com/ChristophKirst/developmental_synapse_remodeling?tab=readme-ov-file) 
+is a python toolbox for the analysis of synapse turnover dynamics in experimental data and model fitting 
+as described in [Nakajo et al.](#references)
 
 
 ## Installation
@@ -53,8 +54,15 @@ Please cite us using
     }
 
 
+## Experimental Collaborators
+
+### [Haruna Nakajo](https://www.annamolofskylab.org/team-2)
+
+### [Anna Molofsky](https://www.annamolofskylab.org/)
+
 ## Authors
-[Christoph Kirst](https://profiles.ucsf.edu/christoph.kirst)
+
+### [Christoph Kirst](https://profiles.ucsf.edu/christoph.kirst)
 
 ## Acknowledgements
 We are very grateful to the Kavli Institute for Fundamental Neuroscience and the University of California San Francisco (UCSF) for supporting this project.
