@@ -19,11 +19,11 @@ We recommend installation via conda using the [`environment.yml`](environment.ym
 
 ## Running
 
-The `scripts` folder contains exmaple and analysis scripts:
+The `scripts` folder contains example and analysis scripts:
 
 * [`example.py`](/scripts/example.py) runs the code with simple example simulations of the model. 
 
-* [`analysis.py`](/scripts/analysis.py) performs the full analysis and reproduces the figures from [Nakajo et al.](#references).
+* [`analysis.py`](/scripts/analysis.py) performs the full analysis and reproduces the figures from [Nakajo et al.](#references)
 
 A sample simulation as generated in the example script looks like this:
 
