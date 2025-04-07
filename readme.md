@@ -17,6 +17,7 @@ We recommend installation via conda using the [`environment.yml`](environment.ym
 
     >>> conda env create -f environment.yml
 
+
 ## Running
 
 The `scripts` folder contains example and analysis scripts:
@@ -25,14 +26,19 @@ The `scripts` folder contains example and analysis scripts:
 
 * [`analysis.py`](/scripts/analysis.py) performs the full analysis and reproduces the figures from [Nakajo et al.](#references)
 
-A sample simulation as generated in the example script looks like this:
+A sample simulation as generated in the example script looks like the figure below. The panel on the left indicates 
+the individual synapses getting born into the new dynamic state (blue) and either decaying or switching into
+a stable state (orange) before decaying at a slower rate.The right hand side show the totla number of synapses over time.
 
 ![model](/figures/model_example.png)
 
-indicating the individual synapses getting born into the new dynamic state (blue) and either decaying or switching into
-a stable state (orange) before decaying at a slower rate.
+Various theoretical predictions about the model statistics can also be extracted from the model as shown in 
+the second example figure below.
 
 ![model](/figures/model_example_distributions.png)
+
+Both figures were generated using the [`example.py`](/scripts/example.py) script.
+
 
 ## References
 
@@ -60,12 +66,15 @@ Please cite us using
 
 ### [Anna Molofsky](https://www.annamolofskylab.org/)
 
-## Authors
+
+## Code Authors
 
 ### [Christoph Kirst](https://profiles.ucsf.edu/christoph.kirst)
 
+
 ## Acknowledgements
 We are very grateful to the Kavli Institute for Fundamental Neuroscience and the University of California San Francisco (UCSF) for supporting this project.
+
 
 ## License
 This project is licensed under the [GNU General Public License v3.0](license.txt). 
