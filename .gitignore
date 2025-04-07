@@ -1,7 +1,5 @@
 /notes/
 /mathematica/
 /archiv/
-/scripts/analysis.py
-/figures/model_fit*.png
-/data/sample_data_wt_size_norm.txt
-/data/sample_data_ko_size_norm.txt
+/data/*.txt
+
