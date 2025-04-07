@@ -28,7 +28,7 @@ The `scripts` folder contains example and analysis scripts:
 
 A sample simulation as generated in the example script looks like the figure below. The panel on the left indicates 
 the individual synapses getting born into the new dynamic state (blue) and either decaying or switching into
-a stable state (orange) before decaying at a slower rate.The right hand side show the totla number of synapses over time.
+a stable state (orange) before decaying at a slower rate.The right hand side show the total number of synapses over time.
 
 ![model](/figures/model_example.png)
 
