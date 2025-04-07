@@ -199,6 +199,62 @@ class EventData(object):
         else:
             return self
 
+    def copy(self) -> Self:
+        return copy.deepcopy(self)
+
+    def join(self, other: Self):
+        if not isinstance(other, EventData):
+            raise ValueError
+        if not self.event_types == other.event_types:
+            raise ValueError
+        joined = self.copy()
+        joined.event_sequences = np.concatenate([joined.event_sequences, other.event_sequences], axis=0)
+        return joined
+
+    def choose(self, indices):
+        selected = self.copy()
+        selected.event_sequences = selected.event_sequences[indices]
+        return selected
+
+    def resample(self, size: int | None = None, replace: bool = True):
+        size = size if size is not None else len(self)
+        sample_ids = np.random.choice(range(len(self)), size=size, replace=replace)
+        return self.choose(sample_ids)
+
+    def coarsen(self, measurement_times: list | np.ndarray) -> Self:
+        coarse_times = list(measurement_times)
+        n_coarse_times = len(coarse_times)
+        coarse_times_inf = np.array([-np.inf] + coarse_times + [np.inf])
+
+        event_sequences = self.event_sequences
+        t1, t2 = event_sequences[:, (0, -1)].T
+
+        # remove event sequences non-overlapping coarse times
+        remove = np.zeros(len(self), dtype=bool)
+        for i in range(n_coarse_times + 1):
+            remove = np.logical_or(remove, np.logical_and(coarse_times_inf[i] < t1, t2 < coarse_times_inf[i+1]))
+        coarsened = self.choose(np.logical_not(remove))
+
+        # coarsen sequences
+        coarse_times_inf = coarse_times_inf[1:]
+        event_sequences = coarsened.event_sequences
+        for i, sequence in enumerate(event_sequences):
+            coarse_sequence = []
+
+            # first event types orient to next future coarse time
+            for time in sequence[:-1]:
+                index = np.where(coarse_times_inf >= time)[0][0]
+                coarse_time = coarse_times[index] if index < n_coarse_times else coarse_times[-1]
+                coarse_sequence.append(coarse_time)
+
+            # last event type orients to last previous coarse time
+            index = np.where(coarse_times_inf > sequence[-1])[0][0] - 1
+            coarse_sequence.append(coarse_times[index])
+
+            event_sequences[i] = coarse_sequence
+
+        return coarsened
+
     def event_type_to_index_map(
             self,
             with_duration: bool = False,

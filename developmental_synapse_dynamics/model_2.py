@@ -363,7 +363,7 @@ class ModelParameter(NamedTuple):
 
     def measure(
             self,
-            measurement_times: tuple | np.ndarray,
+            measurement_times: list | np.ndarray,
             measure: str = 'occurred_mean',
             measurement_times_borders: bool | tuple | None = True,
             measurement_iterator: MeasurementIterator | None = None,
